@@ -1,0 +1,58 @@
+--[[
+
+
+
+     :::::::::::       :::::::::       ::::::::   ::::::::::: 
+        :+:           :+:    :+:     :+:    :+:      :+:      
+       +:+           +:+    +:+     +:+    +:+      +:+       
+      +#+           +#++:++#+      +#+    +:+      +#+        
+     +#+           +#+    +#+     +#+    +#+      +#+         
+#+# #+#           #+#    #+#     #+#    #+#      #+#          
+ ####            #########       ########       ###            
+
+
+
+credits :
+
+- azt3kk
+- Estplugs
+
+Join our Discord: https://discord.gg/jBot
+Get key at: https://ads.luarmor.net/get_key?for=Free_jBot-BimncBboHFiP
+
+]]
+
+getgenv().jBot = {
+    General = {
+        Enabled = true,
+        ScriptKey = ""
+    },
+    Bind = {
+        Mode = "Toggle", -- "Toggle", "Hold"
+        KeyMode = "KeyBoard", -- "KeyBoard", "Mouse"
+        Key = "C" -- A-Z for keyboard mode, "MouseButton1", "MouseButton2", "MouseButton3" for mouse mode.
+    },
+    Hitbox = {
+        Size = {
+            SizeX = 1, -- Width
+            SizeY = 4.25, -- Height
+            SizeZ = 0.5, -- Depth
+        },
+        Visuals = {
+            Color = {
+                R = 255,
+                G = 255,
+                B = 255
+            },
+            Transparency = 0.25,
+        }
+    },
+    Prediction = {
+        Enabled = true,
+        Value = 0.075
+    }
+}
+
+--
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/azteekk/jBot/refs/heads/main/FreeObfuscated"))()
