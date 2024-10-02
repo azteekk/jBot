@@ -163,4 +163,4 @@ getgenv().jBot = {
 
 --
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/610f7adf3f1daef45ecfde82063162ee.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/azteekk/jBot/refs/heads/main/PaidObfuscation"))()
