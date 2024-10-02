@@ -29,7 +29,7 @@ getgenv().jBot = {
     Bind = {
         Mode = "Toggle", -- "Toggle", "Hold"
         KeyMode = "KeyBoard", -- "KeyBoard", "Mouse"
-        Key = "Q" -- A-Z, MouseButton1, MouseButton2, MouseButton3
+        Key = "C" -- A-Z, MouseButton1, MouseButton2, MouseButton3
     },
     Hitbox = {
         Size = {
@@ -52,7 +52,7 @@ getgenv().jBot = {
                 Green = 255,
                 Blue = 255
             },
-            Transparency = 0, -- 0-1
+            Transparency = 0.5, -- 0-1
             Material = "SmoothPlastic", -- https://create.roblox.com/docs/reference/engine/enums/Material
             Visible = true -- true / false
         },
@@ -60,7 +60,7 @@ getgenv().jBot = {
     Checks = {
         HealthCheck = { -- Wont let target on player with health under value
             Enabled = false,
-            Value = 15
+            Value = 10
         },
         KnifeCheck = false, -- If knife is held jBot wont click
         WallCheck = false, -- Checks for walls
@@ -78,7 +78,7 @@ getgenv().jBot = {
     },
     Prediction = {
         Enabled = false, -- Predicts player's position based on velocity
-        Value = 0, -- Prediction value
+        Value = 0.05, -- Prediction value
         PingBasedPrediction = {
             Enabled = false,
             Method = "Ranges", -- "AutoPred", "Ranges"
@@ -117,7 +117,7 @@ getgenv().jBot = {
     Misc = {
         UntargetWhenDied = false, -- When target dies jBot will untarget
         HoldingGuns = { -- If enabled and tool name is listed, it will hold
-            Enabled = true,
+            Enabled = false,
             List = { -- Put tool names in here
                 "[AK47]",
                 "[AR]",
@@ -129,7 +129,7 @@ getgenv().jBot = {
             }
         },
         IgnoreList = {
-            Enabled = true,
+            Enabled = false,
             List = { -- Wont target on players in this list if enabled
                 "nelasfanboy",
                 "user",
