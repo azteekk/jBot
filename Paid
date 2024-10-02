@@ -29,15 +29,15 @@ getgenv().jBot = {
     Bind = {
         Mode = "Toggle", -- "Toggle", "Hold"
         KeyMode = "KeyBoard", -- "KeyBoard", "Mouse"
-        Key = "C" -- A-Z, MouseButton1, MouseButton2, MouseButton3
+        Key = "Q" -- A-Z, MouseButton1, MouseButton2, MouseButton3
     },
     Hitbox = {
         Size = {
-            Method = "BodyPart", -- "XYZ", "BodyPart"
+            Method = "XYZ", -- "XYZ", "BodyPart"
             XYZ = {
-                X = 1, -- Width
-                Y = 3.5, -- Height
-                Z = 0.5 -- Depth
+                X = 2, -- Width
+                Y = 2, -- Height
+                Z = 1 -- Depth
             },
             BodyPart = "HumanoidRootPart" -- Body part name
         },
@@ -48,11 +48,11 @@ getgenv().jBot = {
         },
         Visuals = {
             Color = { -- Color
-                Red = 180,
-                Green = 175,
-                Blue = 220
+                Red = 255,
+                Green = 255,
+                Blue = 255
             },
-            Transparency = 0.25, -- 0-1
+            Transparency = 0, -- 0-1
             Material = "SmoothPlastic", -- https://create.roblox.com/docs/reference/engine/enums/Material
             Visible = true -- true / false
         },
@@ -60,15 +60,15 @@ getgenv().jBot = {
     Checks = {
         HealthCheck = { -- Wont let target on player with health under value
             Enabled = false,
-            Value = 4
+            Value = 15
         },
-        KnifeCheck = true, -- If knife is held jBot wont click
-        WallCheck = true, -- Checks for walls
+        KnifeCheck = false, -- If knife is held jBot wont click
+        WallCheck = false, -- Checks for walls
         TypingCheck = true, -- Wont click if you type
-        ForceFieldCheck = true -- Self explantory
+        ForceFieldCheck = false -- Self explantory
     },
     Delay = {
-        Enabled = true,
+        Enabled = false,
         Value = 75,
         Randomizer = {
             Enabled = true,
@@ -77,12 +77,12 @@ getgenv().jBot = {
         }
     },
     Prediction = {
-        Enabled = true, -- Predicts player's position based on velocity
-        Value = 0.1, -- Prediction value
+        Enabled = false, -- Predicts player's position based on velocity
+        Value = 0, -- Prediction value
         PingBasedPrediction = {
-            Enabled = true,
-            Method = "AutoPred", -- "AutoPred", "Ranges"
-            AutoPredCalc = 0.001, -- Example = "Pred = your_ping * AutoPredCalc"
+            Enabled = false,
+            Method = "Ranges", -- "AutoPred", "Ranges"
+            AutoPredCalc = 0, -- Example = "Pred = your_ping * AutoPredCalc"
             Ranges = {
                 -- #1 arg = Minimum ping in specific range
                 -- #2 arg = Maximum ping in specific range
