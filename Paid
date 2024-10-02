@@ -25,7 +25,7 @@ getgenv().jBot = {
     General = {
         Enabled = true, -- Enables / Disables TriggerBot
         ScriptKey = "" -- Paste script key in here
-    }
+    },
     Bind = {
         Mode = "Toggle", -- "Toggle", "Hold"
         KeyMode = "KeyBoard", -- "KeyBoard", "Mouse"
@@ -160,5 +160,7 @@ getgenv().jBot = {
         }
     }
 }
+
 --
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/610f7adf3f1daef45ecfde82063162ee.lua"))()
