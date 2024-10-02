@@ -163,6 +163,4 @@ getgenv().jBot = {
 
 --
 
-script_key = getgenv().jBot.General.ScriptKey;
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/610f7adf3f1daef45ecfde82063162ee.lua"))()
