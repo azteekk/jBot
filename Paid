@@ -33,7 +33,7 @@ getgenv().jBot = {
     },
     Hitbox = {
         Size = {
-            Method = "XYZ", -- "XYZ", "BodyPart"
+            Method = "BodyPart", -- "XYZ", "BodyPart"
             XYZ = {
                 X = 2, -- Width
                 Y = 2, -- Height
@@ -52,7 +52,7 @@ getgenv().jBot = {
                 Green = 255,
                 Blue = 255
             },
-            Transparency = 0.5, -- 0-1
+            Transparency = 0.2, -- 0-1
             Material = "SmoothPlastic", -- https://create.roblox.com/docs/reference/engine/enums/Material
             Visible = true -- true / false
         },
@@ -60,7 +60,7 @@ getgenv().jBot = {
     Checks = {
         HealthCheck = { -- Wont let target on player with health under value
             Enabled = false,
-            Value = 10
+            Value = 5
         },
         KnifeCheck = false, -- If knife is held jBot wont click
         WallCheck = false, -- Checks for walls
@@ -78,11 +78,11 @@ getgenv().jBot = {
     },
     Prediction = {
         Enabled = false, -- Predicts player's position based on velocity
-        Value = 0.05, -- Prediction value
+        Value = 1, -- Prediction value
         PingBasedPrediction = {
             Enabled = false,
             Method = "Ranges", -- "AutoPred", "Ranges"
-            AutoPredCalc = 0, -- Example = "Pred = your_ping * AutoPredCalc"
+            AutoPredCalc = 1, -- Example = "Pred = your_ping * AutoPredCalc"
             Ranges = {
                 -- #1 arg = Minimum ping in specific range
                 -- #2 arg = Maximum ping in specific range
@@ -140,8 +140,8 @@ getgenv().jBot = {
         }
     },
     Commands = {
-        Enabled = true,
-        Prefix = "", -- You can change this to any character (e.g., $, !, #, @, ^, etc.)
+        Enabled = false,
+        Prefix = ".", -- You can change this to any character (e.g., $, !, #, @, ^, etc.)
         List = { -- Dont use capital letters and spaces
             HitboxScale = "h_s", -- Usage : "$hb_scale 1 3.5 0.5"
             HitboxBodyPart = "h_bp", -- Usage : "$hb_bodypart Head" Body parts : https://create.roblox.com/docs/reference/engine/enums/BodyPart and https://create.roblox.com/docs/reference/engine/enums/BodyPartR15
