@@ -21,7 +21,7 @@ Join our Discord: https://discord.gg/jBot
 
 ]]
 
-local jBot = {
+getgenv().jBot = {
 	General = {
 		Enabled = true, -- Enables / Disables TriggerBot
 		ScriptKey = "" -- Paste script key in here
