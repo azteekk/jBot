@@ -1,0 +1,28 @@
+getgenv().CamLock = {
+    General = {
+        Enabled = true
+    },
+    Bind = {
+        KeyType = "KeyBoard", -- "KeyBoard", "Mouse"
+        Key = "C" -- A-Z for "KeyBoard" KeyType; "MouseButton1", "MouseButton2", "MouseButton3" for "Mouse" KeyType
+    },
+    Predction = {
+        Enabled = true,
+        Calculation = 0.001 -- pred = Velocity * Ping * Calculation
+    },
+    Misc = {
+        TypingCheck = true, -- Wont trigger bind when typing
+        Resolver = {
+            Enabled = false,
+            Method = "MoveDirection" -- "MoveDirection" For smoothness, "RecalcVelocity" For efficiency
+        },
+        Shake = {
+            Enabled = true,
+            X = 0,
+            Y = 0,
+            Z = 0
+        }
+    }
+}
+
+loadstring(game:HttpGet:("https://github.com/azteekk/jBot/blob/main/CamLockObfuscated"))()
