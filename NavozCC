@@ -16,7 +16,7 @@ made by azt3kk
 
 ]]
 
-getgenv().NAVOZCC = {
+getgenv().navozCC = {
     General = {
         Enabled = true,
         Mode = "Mouse", -- "Camera", "Mouse"
