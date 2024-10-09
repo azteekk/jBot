@@ -34,6 +34,10 @@ getgenv().navozCC = {
     Misc = {
         TypingCheck = true, -- Wont trigger bind when typing
         HealthCheck = true, -- Wont target on dead players, will also unlock when target dies
+        Fov = {
+            Enabled = true,
+            Value = 300
+        },
         Resolver = {
             Enabled = false,
             Method = "MoveDirection" -- "MoveDirection", "RecalcVelocity"
