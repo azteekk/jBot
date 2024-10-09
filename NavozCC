@@ -1,0 +1,47 @@
+--[[
+
+
+
+ _______    ______  __     __   ______   ________                   _______   _______       
+|       \  |      \|  \   /  \ /      \ |        \                 /       \ /       \      
+| $$$$$$$\  \$$$$$$\\$$\ /  $$|  $$$$$$\ \$$$$$$$$                |  $$$$$$$|  $$$$$$$      
+| $$  | $$ /      $$ \$$\  $$ | $$  | $$  /    $$                 | $$      | $$            
+| $$  | $$|  $$$$$$$  \$$ $$  | $$__/ $$ /  $$$$_        __       | $$_____ | $$_____       
+| $$  | $$ \$$    $$   \$$$    \$$    $$|  $$    \      |  \       \$$     \ \$$     \      
+ \$$   \$$  \$$$$$$$    \$      \$$$$$$  \$$$$$$$$       \$$        \$$$$$$$  \$$$$$$$      
+
+
+
+made by azt3kk
+
+]]
+
+getgenv().CamLock = {
+    General = {
+        Enabled = true,
+        BodyPart = "LowerTorso"
+    },
+    Bind = {
+        KeyType = "KeyBoard", -- "KeyBoard", "Mouse"
+        Key = "C" -- A-Z for "KeyBoard" KeyType; "MouseButton1", "MouseButton2", "MouseButton3" for "Mouse" KeyType
+    },
+    Predction = {
+        Enabled = true,
+        Calculation = 0.001 -- pred = Velocity * Ping * Calculation
+    },
+    Misc = {
+        TypingCheck = true, -- Wont trigger bind when typing
+        Resolver = {
+            Enabled = false,
+            Method = "RecalcVelocity" -- "MoveDirection", "RecalcVelocity"
+        },
+        Shake = {
+            Enabled = true,
+            X = 0,
+            Y = 1,
+            Z = 0
+        }
+    }
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/azteekk/jBot/refs/heads/main/CamLockObfuscated"))()
