@@ -24,6 +24,7 @@ getgenv().navozCC = {
     },
     Bind = {
         KeyType = "KeyBoard", -- "KeyBoard", "Mouse"
+        KeyMode = "Hold", -- "Toggle", "Hold"
         Key = "Q" -- A-Z for "KeyBoard" KeyType; "MouseButton1", "MouseButton2", "MouseButton3" for "Mouse" KeyType
     },
     Predction = {
