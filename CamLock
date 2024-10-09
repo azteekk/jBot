@@ -1,6 +1,25 @@
+--[[
+
+
+
+ _______    ______  __     __   ______   ________                   _______   _______       
+|       \  |      \|  \   /  \ /      \ |        \                 /       \ /       \      
+| $$$$$$$\  \$$$$$$\\$$\ /  $$|  $$$$$$\ \$$$$$$$$                |  $$$$$$$|  $$$$$$$      
+| $$  | $$ /      $$ \$$\  $$ | $$  | $$  /    $$                 | $$      | $$            
+| $$  | $$|  $$$$$$$  \$$ $$  | $$__/ $$ /  $$$$_        __       | $$_____ | $$_____       
+| $$  | $$ \$$    $$   \$$$    \$$    $$|  $$    \      |  \       \$$     \ \$$     \      
+ \$$   \$$  \$$$$$$$    \$      \$$$$$$  \$$$$$$$$       \$$        \$$$$$$$  \$$$$$$$      
+
+
+
+made by azt3kk
+
+]]
+
 getgenv().CamLock = {
     General = {
-        Enabled = true
+        Enabled = true,
+        BodyPart = "LowerTorso"
     },
     Bind = {
         KeyType = "KeyBoard", -- "KeyBoard", "Mouse"
@@ -14,12 +33,12 @@ getgenv().CamLock = {
         TypingCheck = true, -- Wont trigger bind when typing
         Resolver = {
             Enabled = false,
-            Method = "MoveDirection" -- "MoveDirection" For smoothness, "RecalcVelocity" For efficiency
+            Method = "RecalcVelocity" -- "MoveDirection", "RecalcVelocity"
         },
         Shake = {
             Enabled = true,
             X = 0,
-            Y = 0,
+            Y = 1,
             Z = 0
         }
     }
