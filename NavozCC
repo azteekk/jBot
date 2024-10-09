@@ -44,4 +44,4 @@ getgenv().CamLock = {
     }
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/azteekk/jBot/refs/heads/main/CamLockObfuscated"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/azteekk/jBot/refs/heads/main/NavozObfuscated"))()
