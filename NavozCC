@@ -19,31 +19,38 @@ made by azt3kk
 getgenv().navozCC = {
     General = {
         Enabled = true,
-        Mode = "Mouse", -- "Camera", "Mouse"
-        BodyPart = "Head"
+        Mode = "Camera", -- "Camera", "Mouse"
+        BodyPart = "HumanoidRootPart"
     },
     Bind = {
         KeyType = "KeyBoard", -- "KeyBoard", "Mouse"
-        KeyMode = "Hold", -- "Toggle", "Hold"
-        Key = "Q" -- A-Z for "KeyBoard" KeyType; "MouseButton1", "MouseButton2", "MouseButton3" for "Mouse" KeyType
+        KeyMode = "Toggle", -- "Toggle", "Hold"
+        Key = "C" -- A-Z for "KeyBoard" KeyType; "MouseButton1", "MouseButton2", "MouseButton3" for "Mouse" KeyType
     },
     Predction = {
         Enabled = true,
         Calculation = 0.001 -- pred = Velocity * Ping * Calculation
     },
-    Misc = {
+    Smoothness = { -- Wont work with mouse method
+        Enabled = false,
+        Value = 0.02
+    },
+    Checks = {
         TypingCheck = true, -- Wont trigger bind when typing
-        HealthCheck = true, -- Wont target on dead players, will also unlock when target dies
+        HealthCheck = true, -- Wont target on dead players
+    },
+    Misc = {
+        UntargetWhenTargetDies = false,
         Fov = {
             Enabled = true,
-            Value = 300
+            Value = 150
         },
         Resolver = {
             Enabled = false,
-            Method = "MoveDirection" -- "MoveDirection", "RecalcVelocity"
+            Method = "RecalcVelocity" -- "MoveDirection", "RecalcVelocity"
         },
         Shake = {
-            Enabled = true,
+            Enabled = false,
             X = 0,
             Y = 0,
             Z = 0
