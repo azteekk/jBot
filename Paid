@@ -24,7 +24,7 @@ Join our Discord: https://discord.gg/jBot
 getgenv().jBot = {
 	General = {
 		Enabled = true, -- Enables / Disables TriggerBot
-		ScriptKey = "" -- Paste script key in here
+		ScriptKey = "" -- Paste script key in here (not used right now)
 	},
 	Bind = {
 		Mode = "Toggle", -- "Toggle", "Hold"
