@@ -17,171 +17,215 @@ credits :
 - azt3kk
 - Estplugs
 
-Join our Discord: https://discord.gg/jBot
+Join our Discord: https://discord.gg/6v7zhHTtJH
 
 ]]
 
 getgenv().jBot = {
-	General = {
-		Enabled = true, -- Enables / Disables TriggerBot
-		ScriptKey = "" -- Paste script key in here (not used right now)
-	},
-	Bind = {
-		Mode = "Toggle", -- "Toggle", "Hold"
-		KeyMode = "KeyBoard", -- "KeyBoard", "Mouse"
-		Key = "C", -- A-Z, MouseButton1, MouseButton2, MouseButton3
-		Notifications = true
-	},
-	Hitbox = {
-		Size = {
-			Method = "FullBody", -- "XYZ", "BodyPart", "FullBody"
-			XYZ = {
-				X = 2, -- Width
-				Y = 2, -- Height
-				Z = 1 -- Depth
-			},
-			BodyPart = "HumanoidRootPart" -- Body part name
-		},
-		OffSet = {
-			X = 0, -- Offset width
-			Y = 0, -- Offset height
-			Z = 0 -- Offset depth
-		},
-		Visuals = {
-			Color = { -- Color
-				Red = 255,
-				Green = 255,
-				Blue = 255
-			},
-			Transparency = 0.5, -- 0-1
-			Material = "SmoothPlastic", -- https://create.roblox.com/docs/reference/engine/enums/Material
-			Visible = true -- true / false
-		},
-	},
-	Checks = {
-		HealthCheck = { -- Wont let target on player with health under value
-			Enabled = false,
-			Value = 10
-		},
-		KnifeCheck = false, -- If knife is held jBot wont click
-		WallCheck = false, -- Checks for walls
-		TypingCheck = true, -- Wont click if you type
-		ForceFieldCheck = false -- Self explantory
-	},
-	Delay = {
-		Enabled = false,
-		Value = 75,
-		Randomizer = {
-			Enabled = true,
-			MinRange = 50,
-			MaxRange = 100
-		}
-	},
-	Prediction = {
-		Enabled = false, -- Predicts player's position based on velocity
-		Value = 0, -- Prediction value
-		PingBasedPrediction = {
-			Enabled = false,
-			Method = "Ranges", -- "AutoPred", "Ranges"
-			AutoPredCalc = 0, -- Example = "Pred = your_ping * AutoPredCalc"
-			Ranges = {
-				-- #1 arg = Minimum ping in specific range
-				-- #2 arg = Maximum ping in specific range
-				-- #3 arg = Prediction value
-				{0, 10, 0.015},
-				{10, 20, 0.025},
-				{20, 30, 0.035},
-				{30, 40, 0.045},
-				{40, 50, 0.055},
-				{50, 60, 0.065},
-				{60, 70, 0.075},
-				{70, 80, 0.085},
-				{80, 90, 0.095},
-				{90, 100, 0.105},
-				{100, 110, 0.115},
-				{110, 120, 0.125},
-				{120, 130, 0.135},
-				{130, 140, 0.145},
-				{140, 150, 0.155},
-				{150, 160, 0.165},
-				{160, 170, 0.175},
-				{170, 180, 0.185},
-				{180, 190, 0.195},
-				{190, 200, 0.205},
-				{200, math.huge, 0.215}
-			}
-		}
-	},
-	Resolver = {
-		Enabled = false -- Resolves anti aims via recalculating velocity of the player
-	},
-	Misc = {
-		UntargetWhenDied = false, -- When target dies jBot will untarget
-		HoldingGuns = { -- If enabled and tool name is listed, it will hold
-			Enabled = false,
-			List = { -- Put tool names in here
-				"[AK47]",
-				"[AR]",
-				"[DrumGun]",
-				"[Flamethrower]",
-				"[LMG]",
-				"[P90]",
-				"[SMG]"
-			}
-		},
-		IgnoreList = {
-			Enabled = false,
-			List = { -- Wont target on players in this list if enabled
-				"nelasfanboy",
-				"user",
-				"user",
-				"user",
-				"user"
-			}
-		},
-		CustomTextures = {
-			Color = {
-				Enabled = false,
-				Color = {
-					Red = 255,
-					Green = 255,
-					Blue = 255
-				},
-				Material = "SmoothPlastic"
-			},
-			Fog = {
-				Enabled = false,
-				Color = {
-					Red = 255,
-					Green = 255,
-					Blue = 255,
-				},
-				FogStart = 0,
-				FogEnd = 1000
-			}
-		}
-	},
-	Commands = {
-		Enabled = true,
-		Prefix = ".", -- You can change this to any character (e.g., $, !, #, @, ^, etc.)
-		List = { -- Dont use capital letters and spaces
-			HitboxScale = "h_s", -- Usage : "$hb_scale 1 3.5 0.5"
-			HitboxBodyPart = "h_bp", -- Usage : "$hb_bodypart Head" Body parts : https://create.roblox.com/docs/reference/engine/enums/BodyPart and https://create.roblox.com/docs/reference/engine/enums/BodyPartR15
-			HitboxMethod = "h_m", -- Usage : "$hb_method XYZ" or "$hb_method BodyPart" or ".h_m FullBody"
-			HitboxTranspareny = "h_t", -- Changes Hitbox transparency
-			HitboxColor = "h_rgb", -- Usage : "$hb_color 180 175 220"
-			HitboxOffset = "h_fst", -- Usage : "$hb_offset 0 -1 0"
-			Pred = "pred", -- Changes Pred
-			PredToggle = "pred_toggle", -- Toggles Prediction
-			PingBasedPredToggle = "pbp_toggle", -- Toggles Ping Based Prediction
-			PbpMethod = "pbp_method", -- Changes Ping Based Pred method
-			ResolverToggle = "rsv", -- Toggles resolver
-			IgnoreListToggle = "i_l", -- Toggles ignore list
-			DelayToggle = "d_t", -- Toggles shooting delay
-			Prefix = "prfx", -- Usage : "$prfx new_prefix"
-			NotificationsToggle = "n_t" -- Toggles Notifications
-		}
-	}
+    TriggerBot = {
+        General = {
+            Enabled = false, -- Enables / Disables TriggerBot
+            ScriptKey = "zzz" -- Paste script key in here
+            -- You dont need ScriptKey currently
+        },
+        Bind = {
+            Mode = "Toggle", -- "Toggle", "Hold"
+            KeyMode = "KeyBoard", -- "KeyBoard", "Mouse"
+            Key = "C", -- A-Z, MouseButton1, MouseButton2, MouseButton3
+            Notifications = true
+        },
+        Hitbox = {
+            Size = {
+                Method = "XYZ", -- "XYZ", "BodyPart", "FullBody"
+                XYZ = {
+                    X = 1, -- Width
+                    Y = 2, -- Height
+                    Z = 1 -- Depth
+                },
+                BodyPart = "LowerTorso" -- Body part name
+            },
+            OffSet = {
+                X = 0, -- Offset width
+                Y = 0, -- Offset height
+                Z = 0 -- Offset depth
+            },
+            Visuals = {
+                Color = { -- Color
+                    Red = 255,
+                    Green = 255,
+                    Blue = 255
+                },
+                Transparency = 0.2, -- 0-1
+                Material = "SmoothPlastic", -- https://create.roblox.com/docs/reference/engine/enums/Material
+                Visible = true -- true / false
+            },
+        },
+        Checks = {
+            HealthCheck = { -- Wont let target on player with health under value
+                Enabled = false,
+                Value = 10
+            },
+            KnifeCheck = true, -- If knife is held jBot wont click
+            WallCheck = false, -- Checks for walls
+            TypingCheck = true, -- Wont click if you type
+            ForceFieldCheck = true -- Self explantory
+        },
+        Delay = {
+            Enabled = false,
+            Value = 75,
+            Randomizer = {
+                Enabled = true,
+                MinRange = 50,
+                MaxRange = 100
+            }
+        },
+        Prediction = {
+            Enabled = true, -- Predicts player's position based on velocity
+            Value = 0.1, -- Prediction value
+            PingBasedPrediction = {
+                Enabled = false,
+                Method = "AutoPred", -- "AutoPred", "Ranges"
+                AutoPredCalc = 0.01, -- Example = "Pred = your_ping * AutoPredCalc"
+                Ranges = {
+                    -- #1 arg = Minimum ping in specific range
+                    -- #2 arg = Maximum ping in specific range
+                    -- #3 arg = Prediction value
+                    {0, 10, 0.1},
+                    {10, 20, 0.2},
+                    {20, 30, 0.3},
+                    {30, 40, 0.4},
+                    {40, 50, 0.5},
+                    {50, 60, 0.6},
+                    {60, 70, 0.7},
+                    {70, 80, 0.8},
+                    {80, 90, 0.9},
+                    {90, 100, 1},
+                    {100, 110, 1.1},
+                    {110, 120, 1.2},
+                    {120, 130, 1.3},
+                    {130, 140, 1.4},
+                    {140, 150, 1.5},
+                    {150, 160, 1.6},
+                    {160, 170, 1.7},
+                    {170, 180, 1.8},
+                    {180, 190, 1.9},
+                    {190, 200, 2},
+                    {200, math.huge, 2.2}
+                }
+            }
+        },
+        Resolver = {
+            Enabled = false -- Resolves anti aims via recalculating velocity of the player
+        },
+        Misc = {
+            UntargetWhenDied = false, -- When target dies jBot will untarget
+            HoldingGuns = { -- If enabled and tool name is listed, it will hold
+                Enabled = false,
+                List = { -- Put tool names in here
+                    "[AK47]",
+                    "[AR]",
+                    "[DrumGun]",
+                    "[Flamethrower]",
+                    "[LMG]",
+                    "[P90]",
+                    "[SMG]"
+                }
+            },
+            IgnoreList = {
+                Enabled = false,
+                List = { -- Wont target on players in this list if enabled
+                    "nelasfanboy",
+                    "user",
+                    "user",
+                    "user",
+                    "user"
+                }
+            },
+            CustomTextures = {
+                Color = {
+                    Enabled = false,
+                    Color = {
+                        Red = 255,
+                        Green = 255,
+                        Blue = 255
+                    },
+                    Material = "SmoothPlastic"
+                },
+                Fog = {
+                    Enabled = false,
+                    Color = {
+                        Red = 255,
+                        Green = 255,
+                        Blue = 255,
+                    },
+                    FogStart = 0,
+                    FogEnd = 1000
+                }
+            }
+        },
+        Commands = {
+            Enabled = false,
+            Prefix = ".", -- You can change this to any character (e.g., $, !, #, @, ^, etc.)
+            List = { -- Dont use capital letters and spaces
+                HitboxScale = "h_s", -- Usage : "$hb_scale 1 3.5 0.5"
+                HitboxBodyPart = "h_bp", -- Usage : "$hb_bodypart Head" Body parts : https://create.roblox.com/docs/reference/engine/enums/BodyPart and https://create.roblox.com/docs/reference/engine/enums/BodyPartR15
+                HitboxMethod = "h_m", -- Usage : "$hb_method XYZ" or "$hb_method BodyPart" or ".h_m FullBody"
+                HitboxTranspareny = "h_t", -- Changes Hitbox transparency
+                HitboxColor = "h_rgb", -- Usage : "$hb_color 180 175 220"
+                HitboxOffset = "h_fst", -- Usage : "$hb_offset 0 -1 0"
+                Pred = "pred", -- Changes Pred
+                PredToggle = "pred_toggle", -- Toggles Prediction
+                PingBasedPredToggle = "pbp_toggle", -- Toggles Ping Based Prediction
+                PbpMethod = "pbp_method", -- Changes Ping Based Pred method
+                ResolverToggle = "rsv", -- Toggles resolver
+                IgnoreListToggle = "i_l", -- Toggles ignore list
+                DelayToggle = "d_t", -- Toggles shooting delay
+                Prefix = "prfx", -- Usage : "$prfx new_prefix"
+                NotificationsToggle = "n_t" -- Toggles Notifications
+            }
+        }
+    },
+    CamLock = {
+        General = {
+            Enabled = false,
+            Mode = "Camera", -- "Camera", "Mouse", "Dual"
+            BodyPart = "Head"
+        },
+        Bind = {
+            KeyType = "KeyBoard", -- "KeyBoard", "Mouse"
+            KeyMode = "Toggle", -- "Toggle", "Hold"
+            Key = "C" -- A-Z for "KeyBoard" KeyType; "MouseButton1", "MouseButton2", "MouseButton3" for "Mouse" KeyType
+        },
+        Predction = {
+            Enabled = false,
+            Calculation = 0.01 -- pred = Velocity * Ping * Calculation
+        },
+        Smoothness = {
+            Enabled = false,
+            Value = 1,
+        },
+        Checks = {
+            TypingCheck = true, -- Wont shooting and target/untarget when typing
+            HealthCheck = true, -- Wont target on dead players
+        },
+        Misc = {
+            UntargetWhenTargetDies = false,
+            Fov = {
+                Enabled = true,
+                Value = 150
+            },
+            Resolver = {
+                Enabled = false,
+                Method = "RecalcVelocityY" -- "MoveDirection", "RecalcVelocityY", "RecalcVelocity"
+            },
+            Shake = {
+                Enabled = false,
+                X = 0.01,
+                Y = 0.01,
+                Z = 0.01
+            }
+        }
+    }
 }
 
 --
