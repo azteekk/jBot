@@ -72,8 +72,7 @@ getgenv().jBot = {
             WallCheck = false, -- Checks for walls
             TypingCheck = true, -- Wont click if you type
             ForceFieldCheck = true, -- Self explantory
-            KnockedCheck = true,
-            GrabbedCheck = true
+            KnockedCheck = true
         },
         Delay = {
             Enabled = false,
@@ -213,8 +212,7 @@ getgenv().jBot = {
         Checks = {
             TypingCheck = true, -- Wont shooting and target/untarget when typing
             HealthCheck = true, -- Wont target on dead players
-            KnockedCheck = true,
-            GrabbedCheck = true
+            KnockedCheck = true
         },
         Misc = {
             UntargetWhenTargetDies = false,
