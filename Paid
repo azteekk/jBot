@@ -25,8 +25,9 @@ getgenv().jBot = {
     TriggerBot = {
         General = {
             Enabled = false, -- Enables / Disables TriggerBot
-            ScriptKey = "zzz" -- Paste script key in here
+            ScriptKey = "zzz", -- Paste script key in here
             -- You dont need ScriptKey currently
+            ClickMethod = "NO_UNC" -- "NO_UNC" supports 0 unc execs, "UNC" is mouse1click()
         },
         Bind = {
             Mode = "Toggle", -- "Toggle", "Hold"
