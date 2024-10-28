@@ -22,11 +22,13 @@ Join our Discord: https://discord.gg/6v7zhHTtJH
 ]]
 
 getgenv().jBot = {
+    General = {
+        ScriptKey = "zzz", -- Paste script key in here
+        -- You dont need ScriptKey currently
+    },
     TriggerBot = {
         General = {
             Enabled = false, -- Enables / Disables TriggerBot
-            ScriptKey = "zzz", -- Paste script key in here
-            -- You dont need ScriptKey currently
             ClickMethod = "NO_UNC" -- "NO_UNC" supports 0 unc executors, "UNC" is mouse1click()
         },
         Bind = {
