@@ -145,27 +145,6 @@ getgenv().jBot = {
                     "user",
                     "user"
                 }
-            },
-            CustomTextures = {
-                Color = {
-                    Enabled = false,
-                    Color = {
-                        Red = 255,
-                        Green = 255,
-                        Blue = 255
-                    },
-                    Material = "SmoothPlastic"
-                },
-                Fog = {
-                    Enabled = false,
-                    Color = {
-                        Red = 255,
-                        Green = 255,
-                        Blue = 255,
-                    },
-                    FogStart = 0,
-                    FogEnd = 1000
-                }
             }
         },
         Commands = {
